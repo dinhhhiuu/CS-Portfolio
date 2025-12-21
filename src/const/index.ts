@@ -1,6 +1,6 @@
 export const ROUTES = {
   MAIN: "",
-  ABOUT: "about",
+  ABOUT: "about-me",
   CONTACT: "contact",
   COURSE: "course",
 };

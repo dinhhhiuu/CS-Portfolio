@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { LanguageState } from "@/interfaces";
 
 const initialState: LanguageState = {
-  language: "vi",
+  language: "en",
 };
 
 const languageSlice = createSlice({
