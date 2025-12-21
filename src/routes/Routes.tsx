@@ -5,10 +5,10 @@ import MainPage from "@/pages/MainPage";
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/Home" element={<MainPage />} />
+      <Route path="/" element={<MainPage />} />
 
       {/* 404 Not Found */}
-      <Route path="*" element={<Navigate to="/Home" replace />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };

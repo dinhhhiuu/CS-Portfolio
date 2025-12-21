@@ -6,6 +6,12 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { store } from "@/store/store";
 
+const redirect = new URLSearchParams(window.location.search).get("redirect");
+
+if (redirect) {
+  window.history.replaceState(null, "", redirect);
+}
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Provider store={store}>
