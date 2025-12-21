@@ -1,15 +1,18 @@
 name: Deploy Vite React to GitHub Pages
 
+# auto deploy when git push in main branch
 on:
   push:
     branches:
       - main
 
+# allow bot to run this workflow
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# delete previous build
 concurrency:
   group: pages
   cancel-in-progress: true
@@ -19,9 +22,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # clone repo
       - name: Checkout
         uses: actions/checkout@v4
 
+      # setup node
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -33,11 +38,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      # use dist to deploy
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
+  # deploy
   deploy:
     needs: build
     runs-on: ubuntu-latest
