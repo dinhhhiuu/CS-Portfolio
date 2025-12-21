@@ -9,7 +9,12 @@ import { store } from "@/store/store";
 const redirect = new URLSearchParams(window.location.search).get("redirect");
 
 if (redirect) {
-  window.history.replaceState(null, "", redirect);
+  const base = "/CS-Portfolio";
+  const cleanPath = redirect.startsWith(base)
+    ? redirect.replace(base, "")
+    : redirect;
+
+  window.history.replaceState(null, "", cleanPath);
 }
 
 createRoot(document.getElementById("root")!).render(
