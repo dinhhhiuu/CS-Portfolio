@@ -1,5 +1,5 @@
 const CoursePage = () => {
-  return <div>CoursePage</div>;
+  return <div className="h-full">CoursePage</div>;
 };
 
 export default CoursePage;

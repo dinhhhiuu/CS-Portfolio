@@ -3,9 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "@/hooks/hooks";
 import { toggleLanguage, toggleEffect, toggleTheme } from "@/store";
 
-import avatar from "@/assets/favicon-32x32.png";
-
 import { Sun, Moon, Sparkle, Sparkles } from "lucide-react";
+import GraffitiLogo from "@/common/GraffitiLogo";
 
 const HeaderItemsEn = [
   {
@@ -73,9 +72,11 @@ const Header = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-between bg-zinc-500 p-4">
+    <div
+      className={`flex items-center justify-between ${theme === "light" ? "bg-zinc-500" : "bg-zinc-700"} p-4`}
+    >
       {/* LOGO */}
-      <img src={avatar} alt="Avatar" width={32} height={32} className="ml-8" />
+      <GraffitiLogo />
       {/* MAIN */}
       <div className="mr-8 flex gap-12">
         <div className="mr-8 flex gap-8">

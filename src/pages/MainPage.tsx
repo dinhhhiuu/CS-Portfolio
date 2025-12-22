@@ -1,7 +1,7 @@
 const MainPage = () => {
   return (
     <div className="h-full">
-      <div className="">main</div>
+      <div className="">HomePage</div>
     </div>
   );
 };
