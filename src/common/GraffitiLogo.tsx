@@ -1,4 +1,8 @@
+import { useAppSelector } from "@/hooks/hooks";
+
 const GraffitiLogo = () => {
+  const theme = useAppSelector((state) => state.theme.theme);
+
   return (
     <svg
       width="200"
@@ -15,8 +19,8 @@ const GraffitiLogo = () => {
         dominantBaseline="middle"
         fontSize="90"
         fontWeight="400"
-        fill="black"
-        stroke="black"
+        fill={theme === "light" ? "#f2d897" : "#7d345c"}
+        stroke={theme === "light" ? "#f2d897" : "#7d345c"}
         strokeWidth="12"
         style={{
           fontFamily: "'Comic Sans MS', 'Baloo', cursive",
@@ -34,8 +38,8 @@ const GraffitiLogo = () => {
         dominantBaseline="middle"
         fontSize="90"
         fontWeight="400"
-        fill="#fff"
-        stroke="white"
+        fill={theme === "light" ? "#3e3a3c" : "#fff"}
+        stroke={theme === "light" ? "#3e3a3c" : "#fff"}
         strokeWidth="4"
         style={{
           fontFamily: "'Comic Sans MS', 'Baloo', cursive",

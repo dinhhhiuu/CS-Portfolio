@@ -13,7 +13,9 @@ const Layout = () => {
 
       <div
         className={`flex flex-1 overflow-hidden ${
-          theme === "light" ? "bg-zinc-50 text-black" : "bg-zinc-800 text-white"
+          theme === "light"
+            ? "bg-stone-100 text-black"
+            : "bg-zinc-800 text-white"
         }`}
       >
         <Outlet />

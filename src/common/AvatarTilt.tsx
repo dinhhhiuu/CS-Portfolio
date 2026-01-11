@@ -42,7 +42,7 @@ const AvatarTilt = ({ image }: AvatarTiltProps) => {
 
   return (
     <div
-      className="relative h-[400px] w-[400px]"
+      className="relative h-100 w-100"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
