@@ -21,7 +21,7 @@ const MainPage = () => {
           <div className="flex gap-x-4">
             {/* Introduce */}
             <button
-              className={`rounded-2xl px-6 py-2.5 font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg active:scale-95 ${
+              className={`rounded-2xl px-6 py-2.5 font-medium transition-all duration-200 hover:scale-105 hover:cursor-pointer hover:shadow-lg active:scale-95 ${
                 theme === "light"
                   ? "border border-zinc-400 text-zinc-800 hover:bg-zinc-200"
                   : "border border-white/70 text-white hover:bg-white/10"
@@ -32,7 +32,7 @@ const MainPage = () => {
 
             {/* Download CV */}
             <button
-              className={`rounded-2xl px-6 py-2.5 font-medium transition-all duration-200 hover:scale-105 active:scale-95 ${
+              className={`rounded-2xl px-6 py-2.5 font-medium transition-all duration-200 hover:scale-105 hover:cursor-pointer active:scale-95 ${
                 theme === "light"
                   ? "bg-zinc-800 text-white hover:bg-zinc-700"
                   : "bg-white text-zinc-900 hover:bg-zinc-200"
